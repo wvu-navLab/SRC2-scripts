@@ -30,7 +30,7 @@ To setup the workspace (inside of the competition folder), execute the following
   
 ## Create Solution Image   
 1) Add `build-wvu-solution-image.bash` and `wvu_solution.dockerfile` to the cloned directory, which should be `~/srcp2-competitors`.  
-2) Run `./build-wvu-solution-image.bash`
+2) In `~/srcp2-competitors`, run `./build-wvu-solution-image.bash`
   
 ## Create Submission Image  
 TODO  
