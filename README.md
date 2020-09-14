@@ -29,7 +29,7 @@ To setup the workspace (inside of the competition folder), execute the following
 `$ wstool init srcp2-competitors/ros_workspace/src/ https://raw.githubusercontent.com/wvu-navLab/SRC2-meta/master/solution.rosinstall?token=ABXQJT2U46WGMCNQYNRVZZK7NBMVS`  
   
 ## Create Solution Image   
-1) Add `build-wvu-solution-image.bash` and `wvu_solution.dockerfile` to the cloned directory, which should be called `srcp2-competitors`.  
+1) Add `build-wvu-solution-image.bash` and `wvu_solution.dockerfile` to the cloned directory, which should be `~/srcp2-competitors`.  
 2) Run `./build-wvu-solution-image.bash`
   
 ## Create Submission Image  
