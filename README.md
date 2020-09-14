@@ -1,4 +1,4 @@
-**The .rosinstall and instruction have only been tested for round one code. Need to add details for round 2 and round 3.**
+**The .rosinstall and instructions have only been tested for round one code. Need to add details for round 2 and round 3.**
 
 # SRC2-scripts
 Scripts for generating docker images for submission.  
