@@ -6,14 +6,14 @@ Scripts for generating docker images for submission.
 ## Dependencies
 Following instructions for installing [Docker](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Docker), [Nvidia Drivers](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Driver), and [Nvidia Docker Support](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Docker-Support).  
 
-Install [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu) (install the full version i.e., `sudo apt-get install ros-melodic-desktop-full`).
+Install [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu) (use the full version `sudo apt-get install ros-melodic-desktop-full`).
   
 Install [wstool](http://wiki.ros.org/wstool).  
 
 Install more ROS packages by executing the following command:  
 `$ sudo apt-get install ros-melodic-ros-base ros-melodic-cv-bridge ros-melodic-gazebo-msgs ros-melodic-image-transport ros-melodic-tf ros-melodic-pcl-conversions ros-melodic-costmap-2d ros-melodic-pcl-ros ros-melodic-nav-core ros-melodic-base-local-planner ros-melodic-tf2-geometry-msgs ros-melodic-tf2-sensor-msgs ros-melodic-navfn ros-melodic-realtime-tools ros-melodic-move-base-msgs ros-melodic-map-server ros-melodic-move-base`  
   
-Install `pip` some Python dependencies for the object-detection package:
+Install `pip` some Python dependencies for the object-detection package:  
 `$ sudo apt-get install python-pip`  
 `$ pip install scipy`  
 `$ python2.7 -m pip install Pillow`  
