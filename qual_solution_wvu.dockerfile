@@ -1,4 +1,4 @@
-# wvuMountaineers .dockerfile for generating solution image
+# wvuMountaineers .dockerfile for generating "solution" docker image
 
 FROM "ros:melodic"
 
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y ros-melodic-ros-base ros-melodic-cv-bri
 # set up the ros-ws
 RUN mkdir -p /ros_workspace/src
 
-COPY srcp2-competitors/ros_workspace /ros_workspace
+COPY ros_workspace /ros_workspace
 RUN chmod 777 /ros_workspace
 
 RUN rm -rf /ros_workspace/devel
