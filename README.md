@@ -21,6 +21,7 @@ Install `pip` some Python dependencies for the object-detection package:
 `$ python2.7 -m pip install tensorflow`  
 `$ python2.7 -m pip install keras==2.3.1`  
   
+## Setup Workspace
 To setup the workspace (inside of the competition folder), execute the following commands:  
 `$ git clone https://gitlab.com/scheducation/srcp2-competitors.git ~/srcp2-competitors`  
 `$ git config --global credential.helper cache`  
