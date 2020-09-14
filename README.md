@@ -13,7 +13,7 @@ Install [wstool](http://wiki.ros.org/wstool).
 Install more ROS packages by executing the following command:  
 `$ sudo apt-get install ros-melodic-ros-base ros-melodic-cv-bridge ros-melodic-gazebo-msgs ros-melodic-image-transport ros-melodic-tf ros-melodic-pcl-conversions ros-melodic-costmap-2d ros-melodic-pcl-ros ros-melodic-nav-core ros-melodic-base-local-planner ros-melodic-tf2-geometry-msgs ros-melodic-tf2-sensor-msgs ros-melodic-navfn ros-melodic-realtime-tools ros-melodic-move-base-msgs ros-melodic-map-server ros-melodic-move-base`  
   
-Install `pip` some Python dependencies for the object-detection package:  
+Install `pip` and some Python dependencies needed for the object-detection package:  
 `$ sudo apt-get install python-pip`  
 `$ pip install scipy`  
 `$ python2.7 -m pip install Pillow`  
