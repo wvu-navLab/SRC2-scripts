@@ -1,6 +1,6 @@
-# Generate docker image for wvu solution using dockerfile
+# Generate "solution" docker image for wvu solution using dockerfile
 
-source "srcp2-competitors/docker/scripts/srcp2_setup.bash"
+source "docker/scripts/srcp2_setup.bash"
 
 SOLUTION_NAME="no-repo-specified:wvu"
 PATH_TO_DOCKERFILE="qual_solution_wvu.dockerfile"
