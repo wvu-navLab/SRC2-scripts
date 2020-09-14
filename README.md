@@ -1,4 +1,4 @@
-**The .rosinstall and instructions have only been tested for round one code. Need to add details for round 2 and round 3.**
+**The solution.rosinstall and instructions have only been tested for round one code. Need to add details for round 2 and round 3.**
 
 # SRC2-scripts
 Scripts for generating docker images for submission.  
@@ -20,12 +20,12 @@ Install `pip` some Python dependencies for the object-detection package:
 `$ python2.7 -m pip install setuptools`  
 `$ python2.7 -m pip install tensorflow`  
 `$ python2.7 -m pip install keras==2.3.1`  
-
+  
 To setup the workspace (inside of the competition folder), execute the following commands:
-`$ git clone https://gitlab.com/scheducation/srcp2-competitors.git ~/srcp2-competitors`
+`$ git clone https://gitlab.com/scheducation/srcp2-competitors.git ~/srcp2-competitors`  
 `$ git config --global credential.helper cache`  
-`$ mkdir -p srcp2-competitors/ros_workspace/src`
-`$ wstool init srcp2-competitors/ros_workspace/src/ https://raw.githubusercontent.com/wvu-navLab/SRC2-meta/master/solution.rosinstall?token=ABXQJT2U46WGMCNQYNRVZZK7NBMVS`
+`$ mkdir -p srcp2-competitors/ros_workspace/src`  
+`$ wstool init srcp2-competitors/ros_workspace/src/ https://raw.githubusercontent.com/wvu-navLab/SRC2-meta/master/solution.rosinstall?token=ABXQJT2U46WGMCNQYNRVZZK7NBMVS`  
   
 ## Create Solution Image   
 1) Run `git clone https://gitlab.com/scheducation/srcp2-competitors.git`  
