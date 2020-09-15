@@ -53,15 +53,6 @@ $ chmod +x ~/srcp2-competitors/build-wvu-solution-image.bash && chmod +x ~/srcp2
 
 NOTE: To delete cache and existing docker images, execute `docker system prune -a`. The build commands for docker should automatically detect changes in the .dockerfile and update the image accordingly, but this command is useful to ensure the image is built correctly after making modifications.
 
-### Build Solution Image   
-From the previous step, the `build-wvu-solution-image.bash`, `wvu_solution.dockerfile`, `build-wvu-submission-image.bash`, `wvu_submission.dockerfile`, and `wvu-submission-entrypoint.bash` should be in the cloned directory `~/srcp2-competitors`.  
-  
-Execute the following commands to build the solution image replacing `<solution-tag>`:  
-```bash
-$ cd ~/srcp2-competitors
-$ ./build-wvu-solution-image.bash -n wvumountaineers/srcp2_qualification_solution:<solution-tag>
-```  
-  
 ### Build Submission Image  
 **IMPORTANT: The tag of our "submission" to their dockerhub is (and MUST be) "wvu_mountaineers_src2".**  
 
@@ -76,7 +67,7 @@ $ ./build-wvu-submission-image.bash -i wvumountaineers/srcp2_qualification_solut
 $ cd ~/srcp2-competitors
 $ ./build-wvu-submission-image.bash --no-encryption -i wvumountaineers/srcp2_qualification_solution:<solution-tag> -t wvu_mountaineers_src2 -w /ros_workspace -p state_machine -1 sm_round1.launch -2 sm_round2.launch -3 sm_round3.launch
 ```   
-NOTE: The default arguments exist in the script, but to ensure the proper files and parameters are used, please include the arguments.
+**NOTE: If the "solution" image is on Docker Hub, then the build script will automatically pull the docker image for building the submission image. To build and push a "solution" image see instructions below.**
 
 ## Run Submission Image
 To run the submission image, run the simulator, then run the submission image.
@@ -89,6 +80,19 @@ $ ./docker/scripts/launch/roslaunch_docker -r <round-number>
 ```bash
 $ cd ~/srcp2-competitors
 $ ./docker/scripts/qual_submission/run-submission.bash -r <round-number> -t wvu_mountaineers_src2
+```
+
+### Build Solution Image   
+From the previous step, the `build-wvu-solution-image.bash`, `wvu_solution.dockerfile`, `build-wvu-submission-image.bash`, `wvu_submission.dockerfile`, and `wvu-submission-entrypoint.bash` should be in the cloned directory `~/srcp2-competitors`.  
+  
+Execute the following commands to build the solution image replacing `<solution-tag>`:  
+```bash
+$ cd ~/srcp2-competitors
+$ ./build-wvu-solution-image.bash -n wvumountaineers/srcp2_qualification_solution:<solution-tag>
+```  
+To push the solution image, execute the following command replaceing `<solution-tag>`:
+```bash
+docker push wvumountaineers/srcp2_qualification_solution:<solution-tag>
 ```
 
 ## Links
