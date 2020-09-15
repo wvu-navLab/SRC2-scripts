@@ -36,7 +36,14 @@ $ git config --global credential.helper cache
 $ mkdir -p srcp2-competitors/ros_workspace/src
 $ wstool init srcp2-competitors/ros_workspace/src/ https://raw.githubusercontent.com/wvu-navLab/SRC2-meta/master/solution.rosinstall?token=ABXQJT2U46WGMCNQYNRVZZK7NBMVS
 ```  
-  
+
+NOTE: You should be able to compile the code in the workspace. This is not necessary for building the images, but to do so, execute the commands:
+```bash
+$ cd ~/srcp2-competitors/ros_workspace
+$ source install/setup.bash
+$ catkin_make
+```
+ 
 ## Creating Docker Images   
 Follow the instruction for setting up the workspace inside the competitors folder, then add the docker files and scripts in this repository to the competitors folder. You can do this manually or by executing the following command:  
 ```bash
