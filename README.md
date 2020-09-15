@@ -34,7 +34,7 @@ To setup the workspace (inside of the competition folder), execute the following
 $ git clone https://gitlab.com/scheducation/srcp2-competitors.git ~/srcp2-competitors
 $ git config --global credential.helper cache
 $ mkdir -p srcp2-competitors/ros_workspace/src
-$ wstool init ~/srcp2-competitors/ros_workspace/src/ https://raw.githubusercontent.com/wvu-navLab/SRC2-meta/master/solution.rosinstall?token=ABXQJT2U46WGMCNQYNRVZZK7NBMVS
+$ wstool init ~/srcp2-competitors/ros_workspace/src/ https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/solution.rosinstall?token=ABXQJT5AQKGDHJO6BPDW65C7NJFJM
 ```  
 
 **NOTE: This is not necessary for building the images, but you should be able to compile the code in the workspace. To do so, execute the commands:**
