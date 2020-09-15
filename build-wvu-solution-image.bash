@@ -4,8 +4,9 @@ pushd `pwd` > /dev/null 2>&1
 cd $(cd -P -- "$(dirname -- "$0")" && pwd -P)
 source "docker/scripts/srcp2_setup.bash"
 
-# SOLUTION_NAME="no-repo-specified:test"
+SOLUTION_NAME="no-repo-specified:no-tag-specified"
 PATH_TO_DOCKERFILE="wvu_solution.dockerfile"
+PATH_TO_BUILD_CONTEXT="."
 
 function help() {
     echo -e "
@@ -41,7 +42,7 @@ while getopts n:h arg; do
 done
 
 echo -e "${echo_info} building wvu solution..."
-if ! docker build --file ${PATH_TO_DOCKERFILE} --tag  ${SOLUTION_NAME} .
+if ! docker build --file ${PATH_TO_DOCKERFILE} --tag  ${SOLUTION_NAME} ${PATH_TO_BUILD_CONTEXT}
 then
     echo -e "${echo_error} unable to build wvu solution"
     quit_with_popd 1
