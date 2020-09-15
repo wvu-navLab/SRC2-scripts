@@ -56,7 +56,7 @@ NOTE: To delete cache and existing docker images, execute `docker system prune -
 ### Build Solution Image   
 From the previous step, the `build-wvu-solution-image.bash`, `wvu_solution.dockerfile`, `build-wvu-submission-image.bash`, `wvu_submission.dockerfile`, and `wvu-submission-entrypoint.bash` should be in the cloned directory `~/srcp2-competitors`.  
   
-Execute the following commands to build the solution image replacing <solution-tag>:  
+Execute the following commands to build the solution image replacing `<solution-tag>`:  
 ```bash
 $ cd ~/srcp2-competitors
 $ ./build-wvu-solution-image.bash -n wvumountaineers/srcp2_qualification_solution:<solution-tag>
@@ -65,13 +65,13 @@ $ ./build-wvu-solution-image.bash -n wvumountaineers/srcp2_qualification_solutio
 ### Build Submission Image  
 **IMPORTANT: The tag of our "submission" to their dockerhub is (and MUST be) "wvu_mountaineers_src2".**  
 
-**WITH ENCRYPTION:** To build the "submission" image with encryption, execute the following commands replacing <solution-tag>:  
+**WITH ENCRYPTION:** To build the "submission" image with encryption, execute the following commands replacing `<solution-tag>`:  
 ```bash
 $ cd ~/srcp2-competitors
 $ ./build-wvu-submission-image.bash -i wvumountaineers/srcp2_qualification_solution:<solution-tag> -t wvu_mountaineers_src2 -w /ros_workspace -p state_machine -1 sm_round1.launch -2 sm_round2.launch -3 sm_round3.launch
 ```   
 
-**WITHOUT ENCRYPTION:** To build the "submission" image without encryption, execute the following commands replacing <solution-tag> (only difference is `--no-encryption` is added):
+**WITHOUT ENCRYPTION:** To build the "submission" image without encryption, execute the following commands replacing `<solution-tag>` (only difference is `--no-encryption` is added):
 ```bash
 $ cd ~/srcp2-competitors
 $ ./build-wvu-submission-image.bash --no-encryption -i wvumountaineers/srcp2_qualification_solution:<solution-tag> -t wvu_mountaineers_src2 -w /ros_workspace -p state_machine -1 sm_round1.launch -2 sm_round2.launch -3 sm_round3.launch
