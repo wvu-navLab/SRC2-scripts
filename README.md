@@ -33,4 +33,4 @@ To setup the workspace (inside of the competition folder), execute the following
 2) In `~/srcp2-competitors`, run `./build-wvu-solution-image.bash`
   
 ## Create Submission Image  
-TODO  
+The tag of our submission to their dockerhub must be "wvu_mountaineers_src2"
