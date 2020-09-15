@@ -62,13 +62,13 @@ If `build-wvu-solution-image.bash` is not an executable, run `chmod +x build-wvu
 ### Build Submission Image  
 **IMPORTANT: The tag of our "submission" to their dockerhub is (and MUST be) "wvu_mountaineers_src2".**  
 
-The solution image must already be built. Now, to build the submission image **WITH ENCRYPTION**, execute the following commands:  
+The solution image must already be built. Now, to build the "submission" image **WITH ENCRYPTION**, execute the following commands:  
 ```bash
 $ cd ~/srcp2-competitors
 $ ./build-wvu-submission-image.bash -i TODO:wvu_mountaineers_sol -t wvu_mountaineers_src2 -w /ros_workspace -p state_machine -1 sm_round1.launch -2 sm_round2.launch -3 sm_round3.launch
 ```   
 
-To build the solution image **WITHOUT ENCRYPTION**, execute the following command (only difference is `--no-encryption` is added):
+To build the "submission" image **WITHOUT ENCRYPTION**, execute the following command (only difference is `--no-encryption` is added):
 ```bash
 $ cd ~/srcp2-competitors
 $ ./build-wvu-submission-image.bash --no-encryption -i TODO:wvu_mountaineers_sol -t wvu_mountaineers_src2 -w /ros_workspace -p state_machine -1 sm_round1.launch -2 sm_round2.launch -3 sm_round3.launch
