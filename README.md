@@ -61,7 +61,6 @@ Execute the following commands to build the solution image:
 $ cd ~/srcp2-competitors
 $ ./build-wvu-solution-image.bash -n TODO:wvu_mountaineers_sol
 ```  
-If `build-wvu-solution-image.bash` is not an executable, run `chmod +x build-wvu-solution-image.bash`.  
   
 ### Build Submission Image  
 **IMPORTANT: The tag of our "submission" to their dockerhub is (and MUST be) "wvu_mountaineers_src2".**  
