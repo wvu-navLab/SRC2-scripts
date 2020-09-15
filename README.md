@@ -42,9 +42,9 @@ $ wstool init ~/srcp2-competitors/ros_workspace/src/ https://raw.githubuserconte
 $ cd ~/srcp2-competitors/ros_workspace
 $ source install/setup.bash
 $ catkin_make
-```
- 
-## Creating Docker Images   
+```  
+
+## Download Scripts for Creating Docker Images  
 Follow the instruction for setting up the workspace inside the competitors folder, then add the docker files and scripts in this repository to the competitors folder. You can do this manually or by executing the following command:  
 ```bash
 $ curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/build-wvu-solution-image.bash?token=ABXQJT5U56E2DH3YG7DWBLK7NIVGW >> ~/srcp2-competitors/build-wvu-solution-image.bash && curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/build-wvu-submission-image.bash?token=ABXQJT32NBOFDCJNXH2YCIC7NIVYW >> ~/srcp2-competitors/build-wvu-submission-image.bash && curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu-submission-entrypoint.bash?token=ABXQJT32EFVHD7QOONYKVJS7NIV46 >> ~/srcp2-competitors/wvu-submission-entrypoint.bash && curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_solution.dockerfile?token=ABXQJT3W2NAY2YY4BLT4LIS7NIWB4 >> ~/srcp2-competitors/wvu_solution.dockerfile && curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_submission.dockerfile?token=ABXQJTYTW7PV7Y7JCUZM3NS7NIWEQ >> ~/srcp2-competitors/wvu_submission.dockerfile
@@ -53,7 +53,7 @@ $ chmod +x ~/srcp2-competitors/build-wvu-solution-image.bash && chmod +x ~/srcp2
 
 NOTE: To delete cache and existing docker images, execute `docker system prune -a`. The build commands for docker should automatically detect changes in the .dockerfile and update the image accordingly, but this command is useful to ensure the image is built correctly after making modifications.
 
-### Build Submission Image  
+## Create Submission Image  
 **IMPORTANT: The tag of our "submission" to their dockerhub is (and MUST be) "wvu_mountaineers_src2".**  
 
 **WITH ENCRYPTION:** To build the "submission" image with encryption, execute the following commands replacing `<solution-tag>`:  
@@ -80,9 +80,9 @@ $ ./docker/scripts/launch/roslaunch_docker -r <round-number>
 ```bash
 $ cd ~/srcp2-competitors
 $ ./docker/scripts/qual_submission/run-submission.bash -r <round-number> -t wvu_mountaineers_src2
-```
+```  
 
-### Build Solution Image   
+## Create Solution Image (only needed if not using solution image on Docker Hub)   
 From the previous step, the `build-wvu-solution-image.bash`, `wvu_solution.dockerfile`, `build-wvu-submission-image.bash`, `wvu_submission.dockerfile`, and `wvu-submission-entrypoint.bash` should be in the cloned directory `~/srcp2-competitors`.  
   
 Execute the following commands to build the solution image replacing `<solution-tag>`:  
