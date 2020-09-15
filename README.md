@@ -1,7 +1,7 @@
 **The solution.rosinstall and instructions have only been tested for round one code. Need to add details for round 2 and round 3.**
 
 # SRC2-scripts
-Scripts for generating docker images for submission.  
+This repository contains all scripts need for generating the docker images for submission as well as instructions for setting up the simulator and worksace (required for building the docker images).
   
 ## Dependencies
 * Following instructions for installing [Docker](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Docker), [Nvidia Drivers](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Driver), and [Nvidia Docker Support](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Docker-Support).  
