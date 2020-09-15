@@ -33,7 +33,7 @@ To setup the workspace (inside of the competition folder), execute the following
 ```bash
 $ git clone https://gitlab.com/scheducation/srcp2-competitors.git ~/srcp2-competitors
 $ git config --global credential.helper cache
-$ mkdir -p srcp2-competitors/ros_workspace/src
+$ mkdir -p ~/srcp2-competitors/ros_workspace/src
 $ wstool init ~/srcp2-competitors/ros_workspace/src/ https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/solution.rosinstall?token=ABXQJT5AQKGDHJO6BPDW65C7NJFJM
 ```  
 
