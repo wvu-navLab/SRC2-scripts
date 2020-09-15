@@ -85,3 +85,8 @@ $ ~/./docker/scripts/launch/roslaunch_docker -r <round-number>
 ```bash
 $ ~/./docker/scripts/qual_submission/run-submission.bash -r <round-number> -t wvu_mountaineers_src2
 ```
+
+## Links
+The submission guidelines from NASA are provided here: https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Rules/Submission  
+
+A demo for generating the docker images from NASA is provided here: https://gitlab.com/scheducation/srcp2-competitors/-/tree/master/docker/scripts/qual_submission
