@@ -82,11 +82,13 @@ NOTE: The default arguments exist in the script, but to ensure the proper files 
 To run the submission image, run the simulator, then run the submission image.
 * To run the simulator, execute:
 ```bash
-$ ~/./docker/scripts/launch/roslaunch_docker -r <round-number>
+$ cd ~/srcp2-competitors
+$ ./docker/scripts/launch/roslaunch_docker -r <round-number>
 ```
 * To run the submission, execute:
 ```bash
-$ ~/./docker/scripts/qual_submission/run-submission.bash -r <round-number> -t wvu_mountaineers_src2
+$ cd ~/srcp2-competitors
+$ ./docker/scripts/qual_submission/run-submission.bash -r <round-number> -t wvu_mountaineers_src2
 ```
 
 ## Links
