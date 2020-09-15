@@ -37,7 +37,7 @@ $ mkdir -p srcp2-competitors/ros_workspace/src
 $ wstool init srcp2-competitors/ros_workspace/src/ https://raw.githubusercontent.com/wvu-navLab/SRC2-meta/master/solution.rosinstall?token=ABXQJT2U46WGMCNQYNRVZZK7NBMVS
 ```  
 
-NOTE: You should be able to compile the code in the workspace. This is not necessary for building the images, but to do so, execute the commands:
+**NOTE: This is not necessary for building the images, but you should be able to compile the code in the workspace. To do so, execute the commands:**
 ```bash
 $ cd ~/srcp2-competitors/ros_workspace
 $ source install/setup.bash
