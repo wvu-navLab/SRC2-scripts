@@ -54,7 +54,7 @@ $ chmod +x ~/srcp2-competitors/build-wvu-solution-image.bash && chmod +x ~/srcp2
 NOTE: To delete cache and existing docker images, execute `docker system prune -a`. The build commands for docker should automatically detect changes in the .dockerfile and update the image accordingly, but this command is useful to ensure the image is built correctly after making modifications.
 
 ## Create Submission Image  
-**IMPORTANT: The tag of our "submission" to their dockerhub is (and MUST be) "wvu_mountaineers_src2". This is specified when building the submission image (using `-t`) and is difference from `<solution-tag>`.**  
+**IMPORTANT: The tag of our "submission" to their dockerhub is (and MUST be) "wvu_mountaineers_src2". This is specified when building the submission image (using `-t wvu_mountaineers_src2`) and is different from `<solution-tag>`.**  
 
 **WITH ENCRYPTION:** To build the "submission" image with encryption, execute the following commands replacing `<solution-tag>`:  
 ```bash
