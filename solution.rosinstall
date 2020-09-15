@@ -15,3 +15,4 @@
 - git: {local-name: SRC2-waypoint-checker, uri: 'https://github.com/wvu-navLab/SRC2-waypoint-checker.git'}
 - git: {local-name: SRC2-manipulation, uri: 'https://github.com/wvu-navLab/SRC2-manipulation.git'}
 - git: {local-name: SRC2-Round-3, uri: 'https://github.com/wvu-navLab/SRC2-Round-3.git'}
+- git: {local-name: SRC2-mobility-checker, uri: 'https://github.com/wvu-navLab/SRC2-mobility-checker.git'}
