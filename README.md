@@ -2,6 +2,8 @@
 This repository contains all scripts need for generating the docker images for submission as well as instructions for setting up the simulator and worksace (required for building the docker images).
   
 # Quick Start (Minimal Steps for Testing Submission)
+This quick start requires that you have installed [Docker](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Docker), [Nvidia Drivers](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Driver), and [Nvidia Docker Support](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Docker-Support).  
+
 1. Download scripts needed for building submission image:   
 ```bash
 $ git clone https://gitlab.com/scheducation/srcp2-competitors.git ~/srcp2-competitors
