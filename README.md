@@ -24,7 +24,7 @@ $ ./docker/scripts/qual_submission/run-submission.bash -r <round-number> -t wvu_
 ```
 5. Unpause the simulator.  
   
-# Creating Images from Workspace
+# Creating Docker Images from Workspace
 ## 1. Dependencies
 * Following instructions for installing [Docker](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Docker), [Nvidia Drivers](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Driver), and [Nvidia Docker Support](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Docker-Support).  
 
