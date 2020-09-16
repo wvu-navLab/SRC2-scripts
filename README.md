@@ -23,6 +23,7 @@ $ ./docker/scripts/launch/roslaunch_docker -r <round-number>
 $ cd ~/srcp2-competitors
 $ ./docker/scripts/qual_submission/run-submission.bash -r <round-number> -t wvu_mountaineers_src2
 ```
+3. Unpause the simulator.
   
 ## Dependencies
 * Following instructions for installing [Docker](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Docker), [Nvidia Drivers](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Driver), and [Nvidia Docker Support](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Docker-Support).  
