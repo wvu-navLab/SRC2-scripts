@@ -102,7 +102,7 @@ $ ./build-wvu-submission-image.bash -i wvumountaineers/srcp2_qualification_solut
 $ cd ~/srcp2-competitors
 $ ./build-wvu-submission-image.bash --no-encryption -i wvumountaineers/srcp2_qualification_solution:<solution-tag> -t wvu_mountaineers_src2 -w /ros_workspace -p state_machine -1 sm_round1.launch -2 sm_round2.launch -3 sm_round3.launch
 ```   
-If the "solution" image is on Docker Hub, then the build script will automatically pull the docker image for building the submission image. To build and push a "solution" image see instructions below.
+If the "solution" image is on Docker Hub, then the build script will automatically pull the docker image for building the submission image. To build and push a "solution" image see instructions from previous steps.
 
 ## 6. Run Submission Image
 To run the submission image, run the simulator, then run the submission image.
