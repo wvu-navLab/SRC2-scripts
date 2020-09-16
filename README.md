@@ -23,6 +23,8 @@ $ cd ~/srcp2-competitors
 $ ./docker/scripts/qual_submission/run-submission.bash -r <round-number> -t wvu_mountaineers_src2
 ```
 5. Unpause the simulator.  
+
+NOTE: If you get the error, unable to find the public key "../encryption/srcp2-public.pem". Update the competitors folder.
   
 # Creating Docker Images from Workspace
 ## 1. Dependencies
