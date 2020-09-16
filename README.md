@@ -1,29 +1,6 @@
 # SRC2-scripts
 This repository contains all scripts need for generating the docker images for submission as well as instructions for setting up the simulator and worksace (required for building the docker images).
   
-## Quick Start (Minimal Steps for Testing Submission)
-1. Download scripts needed for building submission image:   
-```bash
-$ git clone https://gitlab.com/scheducation/srcp2-competitors.git ~/srcp2-competitors
-$ curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/build-wvu-submission-image.bash?token=ABXQJT32NBOFDCJNXH2YCIC7NIVYW >> ~/srcp2-competitors/build-wvu-submission-image.bash && curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu-submission-entrypoint.bash?token=ABXQJT32EFVHD7QOONYKVJS7NIV46 >> ~/srcp2-competitors/wvu-submission-entrypoint.bash && curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_submission.dockerfile?token=ABXQJTYTW7PV7Y7JCUZM3NS7NIWEQ >> ~/srcp2-competitors/wvu_submission.dockerfile && chmod +x ~/srcp2-competitors/build-wvu-submission-image.bash && chmod +x ~/srcp2-competitors/wvu-submission-entrypoint.bash
-```   
-2. Build the submission image without encryption using our solution image on Docker Hub (where the `<solution-tag>` is the version of the solution image pulled from our Docker Hub):   
-```bash
-$ cd ~/srcp2-competitors
-$ ./build-wvu-submission-image.bash --no-encryption -i wvumountaineers/srcp2_qualification_solution:<solution-tag> -t wvu_mountaineers_src2 -w /ros_workspace -p state_machine -1 sm_round1.launch -2 sm_round2.launch -3 sm_round3.launch
-```   
-3. Run the simulator (replacing `<round-number>`)
-```bash
-$ cd ~/srcp2-competitors
-$ ./docker/scripts/launch/roslaunch_docker -r <round-number>
-```
-4. Run the submission image (replacing `<round-number>`)
-```bash
-$ cd ~/srcp2-competitors
-$ ./docker/scripts/qual_submission/run-submission.bash -r <round-number> -t wvu_mountaineers_src2
-```
-5. Unpause the simulator.
-  
 ## Dependencies
 * Following instructions for installing [Docker](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Docker), [Nvidia Drivers](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Driver), and [Nvidia Docker Support](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Docker-Support).  
 
@@ -49,6 +26,29 @@ $ python2.7 -m pip install tensorflow
 $ python2.7 -m pip install keras==2.3.1
 ```  
   
+## Quick Start (Minimal Steps for Testing Submission)
+1. Download scripts needed for building submission image:   
+```bash
+$ git clone https://gitlab.com/scheducation/srcp2-competitors.git ~/srcp2-competitors
+$ curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/build-wvu-submission-image.bash?token=ABXQJT32NBOFDCJNXH2YCIC7NIVYW >> ~/srcp2-competitors/build-wvu-submission-image.bash && curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu-submission-entrypoint.bash?token=ABXQJT32EFVHD7QOONYKVJS7NIV46 >> ~/srcp2-competitors/wvu-submission-entrypoint.bash && curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_submission.dockerfile?token=ABXQJTYTW7PV7Y7JCUZM3NS7NIWEQ >> ~/srcp2-competitors/wvu_submission.dockerfile && chmod +x ~/srcp2-competitors/build-wvu-submission-image.bash && chmod +x ~/srcp2-competitors/wvu-submission-entrypoint.bash
+```   
+2. Build the submission image without encryption using our solution image on Docker Hub (where the `<solution-tag>` is the version of the solution image pulled from our Docker Hub):   
+```bash
+$ cd ~/srcp2-competitors
+$ ./build-wvu-submission-image.bash --no-encryption -i wvumountaineers/srcp2_qualification_solution:<solution-tag> -t wvu_mountaineers_src2 -w /ros_workspace -p state_machine -1 sm_round1.launch -2 sm_round2.launch -3 sm_round3.launch
+```   
+3. Run the simulator (replacing `<round-number>`)
+```bash
+$ cd ~/srcp2-competitors
+$ ./docker/scripts/launch/roslaunch_docker -r <round-number>
+```
+4. Run the submission image (replacing `<round-number>`)
+```bash
+$ cd ~/srcp2-competitors
+$ ./docker/scripts/qual_submission/run-submission.bash -r <round-number> -t wvu_mountaineers_src2
+```
+5. Unpause the simulator.  
+  
 ## Setup Workspace Inside Competitors Folder
 To setup the workspace (inside of the competition folder), execute the following commands:  
 ```bash
@@ -73,6 +73,19 @@ $ chmod +x ~/srcp2-competitors/build-wvu-solution-image.bash && chmod +x ~/srcp2
 ```  
 
 NOTE: To delete cache and existing docker images, execute `docker system prune -a`. The build commands for docker should automatically detect changes in the .dockerfile and update the image accordingly, but this command is useful to ensure the image is built correctly after making modifications.
+
+## Create Solution Image (only needed if not using solution image on Docker Hub)   
+From the previous step, the `build-wvu-solution-image.bash`, `wvu_solution.dockerfile`, `build-wvu-submission-image.bash`, `wvu_submission.dockerfile`, and `wvu-submission-entrypoint.bash` should be in the cloned directory `~/srcp2-competitors`.  
+  
+Execute the following commands to build the solution image replacing `<solution-tag>`:  
+```bash
+$ cd ~/srcp2-competitors
+$ ./build-wvu-solution-image.bash -n wvumountaineers/srcp2_qualification_solution:<solution-tag>
+```  
+To push the solution image, execute the following command replaceing `<solution-tag>`:
+```bash
+docker push wvumountaineers/srcp2_qualification_solution:<solution-tag>
+```
 
 ## Create Submission Image  
 **IMPORTANT: The tag of our "submission" to their dockerhub is (and MUST be) "wvu_mountaineers_src2". This is specified when building the submission image (using `-t wvu_mountaineers_src2`) and is different from `<solution-tag>`.**  
@@ -102,19 +115,6 @@ $ ./docker/scripts/launch/roslaunch_docker -r <round-number>
 $ cd ~/srcp2-competitors
 $ ./docker/scripts/qual_submission/run-submission.bash -r <round-number> -t wvu_mountaineers_src2
 ```  
-
-## Create Solution Image (only needed if not using solution image on Docker Hub)   
-From the previous step, the `build-wvu-solution-image.bash`, `wvu_solution.dockerfile`, `build-wvu-submission-image.bash`, `wvu_submission.dockerfile`, and `wvu-submission-entrypoint.bash` should be in the cloned directory `~/srcp2-competitors`.  
-  
-Execute the following commands to build the solution image replacing `<solution-tag>`:  
-```bash
-$ cd ~/srcp2-competitors
-$ ./build-wvu-solution-image.bash -n wvumountaineers/srcp2_qualification_solution:<solution-tag>
-```  
-To push the solution image, execute the following command replaceing `<solution-tag>`:
-```bash
-docker push wvumountaineers/srcp2_qualification_solution:<solution-tag>
-```
 
 ## Links
 The submission guidelines from NASA are provided here: https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Rules/Submission  
