@@ -83,7 +83,7 @@ Execute the following commands to build the solution image replacing `<solution-
 $ cd ~/srcp2-competitors
 $ ./build-wvu-solution-image.bash -n wvumountaineers/srcp2_qualification_solution:<solution-tag>
 ```  
-To push the solution image, execute the following command replaceing `<solution-tag>`:
+To push the solution image, execute the following command replaceing `<solution-tag>` (**Careful! Avoid overwriting existing solution images. Instead, just create a new tag when pushing. Check the [solution repository](https://hub.docker.com/repository/docker/wvumountaineers/srcp2_qualification_solution) to see existing tags.**):
 ```bash
 docker push wvumountaineers/srcp2_qualification_solution:<solution-tag>
 ```
