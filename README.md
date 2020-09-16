@@ -59,7 +59,7 @@ $ mkdir -p ~/srcp2-competitors/ros_workspace/src
 $ wstool init ~/srcp2-competitors/ros_workspace/src/ https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/solution.rosinstall?token=ABXQJT5AQKGDHJO6BPDW65C7NJFJM
 ```  
 
-**NOTE: This is not necessary for building the images, but you should be able to compile the code in the workspace. To do so, execute the commands:**
+This is not necessary for building the images, but you should be able to compile the code in the workspace. To do so, execute the commands:
 ```bash
 $ cd ~/srcp2-competitors/ros_workspace
 $ source install/setup.bash
@@ -102,7 +102,7 @@ $ ./build-wvu-submission-image.bash -i wvumountaineers/srcp2_qualification_solut
 $ cd ~/srcp2-competitors
 $ ./build-wvu-submission-image.bash --no-encryption -i wvumountaineers/srcp2_qualification_solution:<solution-tag> -t wvu_mountaineers_src2 -w /ros_workspace -p state_machine -1 sm_round1.launch -2 sm_round2.launch -3 sm_round3.launch
 ```   
-**NOTE: If the "solution" image is on Docker Hub, then the build script will automatically pull the docker image for building the submission image. To build and push a "solution" image see instructions below.**
+If the "solution" image is on Docker Hub, then the build script will automatically pull the docker image for building the submission image. To build and push a "solution" image see instructions below.
 
 ## 6. Run Submission Image
 To run the submission image, run the simulator, then run the submission image.
