@@ -1,6 +1,29 @@
 # SRC2-scripts
 This repository contains all scripts need for generating the docker images for submission as well as instructions for setting up the simulator and worksace (required for building the docker images).
   
+## Quick Start (Minimal Steps for Testing Submission)
+Download scripts needed for building submission image:   
+```bash
+$ git clone https://gitlab.com/scheducation/srcp2-competitors.git ~/srcp2-competitors
+$ curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/build-wvu-submission-image.bash?token=ABXQJT32NBOFDCJNXH2YCIC7NIVYW >> ~/srcp2-competitors/build-wvu-submission-image.bash && curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu-submission-entrypoint.bash?token=ABXQJT32EFVHD7QOONYKVJS7NIV46 >> ~/srcp2-competitors/wvu-submission-entrypoint.bash && curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_submission.dockerfile?token=ABXQJTYTW7PV7Y7JCUZM3NS7NIWEQ >> ~/srcp2-competitors/wvu_submission.dockerfile && chmod +x ~/srcp2-competitors/build-wvu-submission-image.bash && chmod +x ~/srcp2-competitors/wvu-submission-entrypoint.bash
+```   
+Build the submission image without encryption using our solution image on Docker Hub (where the `<solution-tag>` is the version of the solution image pulled from our Docker Hub):   
+```bash
+$ cd ~/srcp2-competitors
+$ ./build-wvu-submission-image.bash --no-encryption -i wvumountaineers/srcp2_qualification_solution:<solution-tag> -t wvu_mountaineers_src2 -w /ros_workspace -p state_machine -1 sm_round1.launch -2 sm_round2.launch -3 sm_round3.launch
+```   
+Now, run the simulator and the submission image.
+1. Run the simulator (replacing `<round-number>`)
+```bash
+$ cd ~/srcp2-competitors
+$ ./docker/scripts/launch/roslaunch_docker -r <round-number>
+```
+2. Run the submission image (replacing `<round-number>`)
+```bash
+$ cd ~/srcp2-competitors
+$ ./docker/scripts/qual_submission/run-submission.bash -r <round-number> -t wvu_mountaineers_src2
+```
+  
 ## Dependencies
 * Following instructions for installing [Docker](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Docker), [Nvidia Drivers](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Driver), and [Nvidia Docker Support](https://gitlab.com/scheducation/srcp2-competitors/-/wikis/Documentation/Install-Run/Install-Nvidia-Docker-Support).  
 
