@@ -205,13 +205,10 @@ ${B}Copyright${rs}
 "
 }
 
-function docker_tag_exists() {
-    curl --silent -f -lSL https://index.docker.io/v1/repositories/$COMPETITOR_SUBMISSION_REPO/tags/$COMPETITOR_SOLUTION_IMAGE_TAG > /dev/null
-}
 
 function deploy_image() {
 
-    if docker_tag_exists $FINAL_IMAGE_NAME; then
+    if docker manifest inspect $FINAL_IMAGE_NAME > /dev/null 2>&1; then
 
         echo -e "$echo_warn the image with the tag \"$COMPETITOR_SOLUTION_IMAGE_TAG\" "\
                 "already exists in the submission repo."
@@ -229,12 +226,13 @@ function deploy_image() {
         echo -e "$echo_info pushing new image..."
     fi
 
-    if docker push $COMPETITOR_SOLUTION_IMAGE_TAG; then
+    if ! docker push $FINAL_IMAGE_NAME; then
         echo -e "$echo_error unable to complete docker push! "\
                 "You have ${B}${r}NOT${rs} submitted your image"
         return 1
     fi
-    echo -e "$echo_ok Dockerhub push complete. Your SRCP2 solution "\
+    echo -e "$echo_ok Dockerhub push complete."\
+            "Your SRCP2 solution \"$FINAL_IMAGE_NAME\""\
             "has been submitted for grading"
     return 0
 }
@@ -373,10 +371,10 @@ $echo_info round 3 launchfile: \"$ROUND_3_LAUNCHFILE\""
 
 if [ "$USE_ENCRYPTION" == "true" ]; then
     echo -e "
-    $echo_info ${B}Encryption Targets:${rs}
-    $echo_info submission encryption password pub-key: \"$USERS_PUBLIC_KEY\"
-    $echo_info symmetric password ${B}(Keep This Private!)${rs}: \"${symmetric_password}\"
-    $echo_info will be encrypting the following targets: "
+$echo_info ${B}Encryption Targets:${rs}
+$echo_info submission encryption password pub-key: \"$USERS_PUBLIC_KEY\"
+$echo_info symmetric password ${B}(Keep This Private!)${rs}: \"${symmetric_password}\"
+$echo_info will be encrypting the following targets: "
     for target in $encryption_targets; do
         echo -e "$echo_info >\t$target"
     done
