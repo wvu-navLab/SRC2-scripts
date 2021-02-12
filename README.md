@@ -11,7 +11,7 @@ docker system prune -a
 Copy `wvu_competitor.dockerfile` to `~/srcp2-final-public/docker/dockerfiles` folder, `wvu_srcp2_final` script to `~/srcp2-final-public/docker/scripts` folder, and `wvu_comp_final` script to `~/srcp2-final-public/docker/scripts` folder.
 
 ```
-curl https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_competitor.dockerfile?token=ABXQJT6NSOENIUYYKP2A4H3AGAZXU > ~/srcp2-final-public/docker/dockerfiles/wvu_competitor.dockerfile && https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_comp_final?token=AFAVV7NA3BATZBH6LKMVCTTAGA4DE > ~/srcp2-final-public/docker/scripts/wvu_comp_final && https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_srcp2_final?token=AFAVV7JKDRAUTJWWP5LM2L3AGA4AA > ~/srcp2-final-public/docker/scripts/wvu_srcp2_final && chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final && chmod +x ~/srcp2-final-public/docker/scripts/wvu_srcp2_final 
+curl "https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_competitor.dockerfile?token=ABXQJT6NSOENIUYYKP2A4H3AGAZXU" > ~/srcp2-final-public/docker/dockerfiles/wvu_competitor.dockerfile && curl "https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_comp_final.sh?token=ABXQJTYQ4ZTX5M3LJMH3FLLAGA5VC" > ~/srcp2-final-public/docker/scripts/wvu_comp_final && curl "https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_srcp2_final.sh?token=ABXQJT2BMEDLDZ53LXEYFH3AGA5WW" > ~/srcp2-final-public/docker/scripts/wvu_srcp2_final && chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final && chmod +x ~/srcp2-final-public/docker/scripts/wvu_srcp2_final 
 ```
 
 ## Build the local Docker image
