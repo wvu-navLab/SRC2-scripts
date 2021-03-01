@@ -1,2 +1,2 @@
 #!/bin/bash
-./docker/scripts/run_comp_final -d -i
+docker exec -it competitor-final /bin/bash

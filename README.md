@@ -32,13 +32,16 @@ docker build --rm -t wvu-competitor -f ~/srcp2-final-public/docker/dockerfiles/w
 source ~/ros_workspace/install/setup.bash
 ```
 # Simple bash files to easy launch the simulator and new terminals
-Copy launch_sim.sh and open_new_terminal.sh inside the srcp2-final-public folder
+Copy launch_sim.sh , open_new_terminal.sh and open_container.sh inside the srcp2-final-public folder
 
 ```
  cp launch_sim.sh ~/srcp2-final-public
  ```
  ```
  cp open_new_terminal.sh ~/srcp2-final-public
+```
+```
+cp open_contianer.sh ~/srcp2-final-public
 ```
 Also copy source_cmd.sh into /srcp2-final-public/cmp_workspace
 ```
@@ -51,6 +54,9 @@ run:
 chmod +x launch_sim.sh
 ```
 ```
+chmod +x open_container.sh
+```
+```
 chmod +x open_new_terminal.sh
 ```
 
@@ -58,11 +64,21 @@ to run the simulation
 ```
 ./launch_sim.sh
 ```
-In new terminal
+In new terminal run the contianer
+```
+./open_container.sh
+```
+and inside the docker terminal to source the workspaces
+```
+cd /home/srcp2/cmp_workspace
+```
+```
+source source_cmd.sh
+```
+For every other new terminal run:
 ```
 ./open_new_terminal.sh
 ```
-and inside the docker terminal to source the workspaces
 ```
 cd /home/srcp2/cmp_workspace
 ```
