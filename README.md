@@ -72,6 +72,7 @@ and inside the docker terminal to source the workspaces
 ```
 cd /home/srcp2/cmp_workspace
 ```
+Inside the source_cmd.sh, change the correct IP address (seems to be different for everyone)
 ```
 source source_cmd.sh
 ```
