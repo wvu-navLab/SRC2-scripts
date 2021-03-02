@@ -12,6 +12,7 @@ ARG enduser_name="srcp2"
 
 USER root
 RUN apt-get update && apt-get install -y \
+    git \
     ros-noetic-move-base \
     ros-noetic-cv-bridge \
     ros-noetic-image-transport \
@@ -20,14 +21,19 @@ RUN apt-get update && apt-get install -y \
     ros-noetic-ros-base \
     ros-noetic-gazebo-msgs \
     ros-noetic-image-transport \
-    ros-noetic-tf \
+    ros-noetic-tf2 \
+    ros-noetic-tf2-ros \
+    ros-noetic-tf2-tools \
+    ros-noetic-tf2-geometry-msgs \
+    ros-noetic-tf2-sensor-msgs \
+    ros-noetic-tf2-eigen \
+    ros-noetic-tf2-py  \
+    ros-noetic-tf2-kdl \
 #    ros-noetic-pcl-conversions \
     ros-noetic-costmap-2d \
 #    ros-noetic-pcl-ros \
     ros-noetic-nav-core \
     ros-noetic-base-local-planner \
-    ros-noetic-tf2-geometry-msgs \
-    ros-noetic-tf2-sensor-msgs \
     ros-noetic-navfn \
     ros-noetic-realtime-tools \
     ros-noetic-move-base-msgs \
