@@ -12,7 +12,37 @@ ARG enduser_name="srcp2"
 
 USER root
 RUN apt-get update && apt-get install -y \
-    ros-noetic-move-base
+    ros-noetic-move-base \
+    ros-noetic-cv-bridge \
+    ros-noetic-image-transport \
+    ros-noetic-vision-opencv \
+    ros-noetic-tf \
+    ros-noetic-ros-base \
+    ros-noetic-gazebo-msgs \
+    ros-noetic-image-transport \
+    ros-noetic-tf \
+#    ros-noetic-pcl-conversions \
+    ros-noetic-costmap-2d \
+#    ros-noetic-pcl-ros \
+    ros-noetic-nav-core \
+    ros-noetic-base-local-planner \
+    ros-noetic-tf2-geometry-msgs \
+    ros-noetic-tf2-sensor-msgs \
+    ros-noetic-navfn \
+    ros-noetic-realtime-tools \
+    ros-noetic-move-base-msgs \
+    ros-noetic-map-server \
+    ros-noetic-laser-assembler \
+    ros-noetic-genpy \
+    && \
+    \
+    pip3 install osrf-pycommon \
+    scipy \
+    numpy==1.19.2 \
+    Pillow \
+    setuptools \
+    tensorflow \
+    keras==2.3.1
 
 # make sure that we are _not_ root at this time!
 USER ${enduser_name}
