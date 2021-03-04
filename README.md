@@ -11,7 +11,7 @@ docker system prune -a
 Copy `wvu_competitor.dockerfile` to `~/srcp2-final-public/docker/dockerfiles` folder, `wvu_srcp2_final` script to `~/srcp2-final-public/docker/scripts` folder, and `wvu_comp_final` script to `~/srcp2-final-public/docker/scripts` folder.
 
 ```
-DONT USE THIS CMD, ITS NOT WORKING curl "https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_competitor.dockerfile?token=ABXQJT6NSOENIUYYKP2A4H3AGAZXU" > ~/srcp2-final-public/docker/dockerfiles/wvu_competitor.dockerfile && curl "https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_comp_final.sh?token=ABXQJTYQ4ZTX5M3LJMH3FLLAGA5VC" > ~/srcp2-final-public/docker/scripts/wvu_comp_final && curl "https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_srcp2_final.sh?token=ABXQJT2BMEDLDZ53LXEYFH3AGA5WW" > ~/srcp2-final-public/docker/scripts/wvu_srcp2_final && chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final && chmod +x ~/srcp2-final-public/docker/scripts/wvu_srcp2_final
+DONT USE THIS CMD, ITS NOT WORKING curl "https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_competitor.dockerfile?token=ABXQJT5IDCOECDYX2AFBYF3AIA6EY" > ~/srcp2-final-public/docker/dockerfiles/wvu_competitor.dockerfile && curl "https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_comp_final.sh?token=ABXQJT54PAO65Y5WH6IBHX3AIA6F2" > ~/srcp2-final-public/docker/scripts/wvu_comp_final && curl "https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_srcp2_final.sh?token=ABXQJT52RH3MFLFTLMZHBVTAIA6GW" > ~/srcp2-final-public/docker/scripts/wvu_srcp2_final && chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final && chmod +x ~/srcp2-final-public/docker/scripts/wvu_srcp2_final
 ```
 
 
