@@ -8,7 +8,7 @@ docker system prune -a
 ```
  
 ## Copy files from Github
-If not already, clone srcp2-final-public:
+If not already cloned, clone srcp2-final-public:
 `git clone https://gitlab.com/scheducation/srcp2-final-public.git`
 
 Copy `wvu_competitor.dockerfile` to `~/srcp2-final-public/docker/dockerfiles` folder, `wvu_srcp2_final` script to `~/srcp2-final-public/docker/scripts` folder, and `wvu_comp_final` script to `~/srcp2-final-public/docker/scripts` folder.
