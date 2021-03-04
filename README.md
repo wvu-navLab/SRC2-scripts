@@ -21,6 +21,7 @@ DONT USE THIS CMD, ITS NOT WORKING curl "https://raw.githubusercontent.com/wvu-n
 ## Build the local Docker image
 
 ```
+cd ~/srcp2-final-public
 docker build --rm -t wvu-competitor -f ~/srcp2-final-public/docker/dockerfiles/wvu_competitor.dockerfile .
 ```
 
