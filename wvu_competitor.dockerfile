@@ -11,34 +11,29 @@ FROM ${base_image}
 ARG enduser_name="srcp2"
 
 USER root
+RUN export DEBIAN_FRONTEND=noninteractive && apt-get install -y ros-noetic-pcl-ros
+
 RUN apt-get update && apt-get install -y \
     git \
     ros-noetic-move-base \
     ros-noetic-cv-bridge \
     ros-noetic-image-transport \
     ros-noetic-vision-opencv \
-    ros-noetic-tf \
-    ros-noetic-ros-base \
     ros-noetic-gazebo-msgs \
     ros-noetic-image-transport \
-    ros-noetic-tf2 \
-    ros-noetic-tf2-ros \
-    ros-noetic-tf2-tools \
-    ros-noetic-tf2-geometry-msgs \
-    ros-noetic-tf2-sensor-msgs \
-    ros-noetic-tf2-eigen \
-    ros-noetic-tf2-py  \
-    ros-noetic-tf2-kdl \
-#    ros-noetic-pcl-conversions \
+    ros-noetic-tf \
+    ros-noetic-pcl-conversions \
     ros-noetic-costmap-2d \
-#    ros-noetic-pcl-ros \
     ros-noetic-nav-core \
     ros-noetic-base-local-planner \
+    ros-noetic-tf2-geometry-msgs \
+    ros-noetic-tf2-sensor-msgs \
     ros-noetic-navfn \
     ros-noetic-realtime-tools \
     ros-noetic-move-base-msgs \
     ros-noetic-map-server \
     ros-noetic-laser-assembler \
+    ros-noetic-tf2-tools \
     ros-noetic-genpy \
     && \
     \
