@@ -1,13 +1,13 @@
 # SRC2-scripts
 This repository contains all scripts need for generating the docker images for submission as well as instructions for setting up the simulator and worksace (required for building the docker images).
 
-# Copying Files
+## 1. Copying Files
 
-## Cleanup Docker
+### Cleanup Docker
 ```
 docker system prune -a
 ```
-## Copy files from Github (automatic)
+### Copy files from Github (automatic)
 If not already cloned, clone srcp2-final-public using the following command from the home directory:
 ```
 git clone https://gitlab.com/scheducation/srcp2-final-public.git
@@ -20,22 +20,22 @@ cp ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfi
 rm -rf ~/SRC2-scripts
 ```  
    
-## Copy files from Github (manually)
+### Copy files from Github (manually)
 If not already cloned, clone srcp2-final-public:
 `git clone https://gitlab.com/scheducation/srcp2-final-public.git`
 
 Copy `wvu_competitor.dockerfile` to `~/srcp2-final-public/docker/dockerfiles` folder, `wvu_srcp2_final` script to `~/srcp2-final-public/docker/scripts` folder, and `wvu_comp_final` script to `~/srcp2-final-public/docker/scripts` folder.
 
-## Build the local Docker image
+## 2. Build the local Docker image
 
 ```
 cd ~/srcp2-final-public
 docker build --rm -t wvu-competitor -f ~/srcp2-final-public/docker/dockerfiles/wvu_competitor.dockerfile .
 ```
 
-# Launching the Simulator  
+## 2. Launching the Simulator  
   
-## Alias
+### Alias
 Add the following alias to `~/.bashrc` (only needs performed once):
 ```
 alias src2_sim='~/srcp2-final-public/docker/scripts/wvu_srcp2_final -C ~/srcp2-final-public/config/default_config.yaml -L'
@@ -44,13 +44,13 @@ alias src2_nterm='docker exec -it competitor-final /bin/bash'
 alias src2_rviz='docker exec -it srcp2-final bash -c "source ~/ros_workspace/install/setup.bash;rosrun rviz rviz"'
 ```
 
-## Launch the sim
+### Launch the sim
 To launch the simulator, execuate the command `src2_sim`, or the following:
 ```
 ~/srcp2-final-public/docker/scripts/wvu_srcp2_final -C ~/srcp2-final-public/config/default_config.yaml -L
 ```
 
-## Launch terminal on Docker image
+### Launch terminal on Docker image
 To launch the terminal on the Docker image, execuate the commands `src2_term` and `src2_nterm`, or the following:
 ```
 ~/srcp2-final-public/docker/scripts/wvu_comp_final -d -i -L
