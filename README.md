@@ -7,8 +7,10 @@ This repository contains all scripts need for generating the docker images for s
 docker system prune -a
 ```
 ## Copy file from Github (automatic)
+If not already cloned, clone srcp2-final-public:
+`git clone https://gitlab.com/scheducation/srcp2-final-public.git`
+
 ```    
-git clone https://gitlab.com/scheducation/srcp2-final-public.git
 git clone https://github.com/wvu-navLab/SRC2-scripts
 cp ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfiles & cp ~/SRC2-scripts/wvu_srcp2_final ~/srcp2-final-public/docker/scripts & cp ~/SRC2-scripts/wvu_comp_final ~/srcp2-final-public/docker/scripts
 rm -rf ~/SRC2-scripts
