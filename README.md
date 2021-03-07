@@ -10,7 +10,7 @@ docker system prune -a
 ```    
 git clone https://gitlab.com/scheducation/srcp2-final-public.git
 git clone https://github.com/wvu-navLab/SRC2-scripts
-p ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfiles & cp ~/SRC2-scripts/wvu_srcp2_final ~/srcp2-final-public/docker/scripts & cp ~/SRC2-scripts/wvu_comp_final ~/srcp2-final-public/docker/scripts
+cp ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfiles & cp ~/SRC2-scripts/wvu_srcp2_final ~/srcp2-final-public/docker/scripts & cp ~/SRC2-scripts/wvu_comp_final ~/srcp2-final-public/docker/scripts
 rm -rf ~/SRC2-scripts
 ```  
    
