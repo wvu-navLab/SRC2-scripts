@@ -6,17 +6,19 @@ This repository contains all scripts need for generating the docker images for s
 ```
 docker system prune -a
 ```
- 
-## Copy files from Github
+## Copy file from Github (automatic)
+```    
+git clone https://gitlab.com/scheducation/srcp2-final-public.git
+git clone https://github.com/wvu-navLab/SRC2-scripts
+p ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfiles & cp ~/SRC2-scripts/wvu_srcp2_final ~/srcp2-final-public/docker/scripts & cp ~/SRC2-scripts/wvu_comp_final ~/srcp2-final-public/docker/scripts
+rm -rf ~/SRC2-scripts
+```  
+   
+## Copy files from Github (manually)
 If not already cloned, clone srcp2-final-public:
 `git clone https://gitlab.com/scheducation/srcp2-final-public.git`
 
 Copy `wvu_competitor.dockerfile` to `~/srcp2-final-public/docker/dockerfiles` folder, `wvu_srcp2_final` script to `~/srcp2-final-public/docker/scripts` folder, and `wvu_comp_final` script to `~/srcp2-final-public/docker/scripts` folder.
-
-```
-DONT USE THIS CMD, ITS NOT WORKING curl "https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_competitor.dockerfile?token=ABXQJT5IDCOECDYX2AFBYF3AIA6EY" > ~/srcp2-final-public/docker/dockerfiles/wvu_competitor.dockerfile && curl "https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_comp_final.sh?token=ABXQJT54PAO65Y5WH6IBHX3AIA6F2" > ~/srcp2-final-public/docker/scripts/wvu_comp_final.sh && curl "https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/wvu_srcp2_final.sh?token=ABXQJT52RH3MFLFTLMZHBVTAIA6GW" > ~/srcp2-final-public/docker/scripts/wvu_srcp2_final.sh && chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final.sh && chmod +x ~/srcp2-final-public/docker/scripts/wvu_srcp2_final.sh
-```
-
 
 ## Build the local Docker image
 
