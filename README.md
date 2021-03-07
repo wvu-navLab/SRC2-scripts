@@ -6,7 +6,7 @@ This repository contains all scripts need for generating the docker images for s
 ```
 docker system prune -a
 ```
-## Copy file from Github (automatic)
+## Copy files from Github (automatic)
 If not already cloned, clone srcp2-final-public using the following command:
 ```
 cd
