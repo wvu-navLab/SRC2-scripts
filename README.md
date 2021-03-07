@@ -56,58 +56,16 @@ To launch the terminal on the Docker image, execuate the commands `src2_term` an
 ~/srcp2-final-public/docker/scripts/wvu_comp_final -d -i -L
 source ~/ros_workspace/install/setup.bash
 ```
-# Simple bash files to easy launch the simulator and new terminals
-Copy launch_sim.sh , open_new_terminal.sh and open_container.sh inside the srcp2-final-public folder
 
-```
- cp launch_sim.sh ~/srcp2-final-public
- ```
- ```
- cp open_new_terminal.sh ~/srcp2-final-public
-```
-```
-cp open_contianer.sh ~/srcp2-final-public
-```
-Also copy source_cmd.sh into /srcp2-final-public/cmp_workspace
+### Sourcing the workspaces inside the docker terminals
+Copy source_cmd.sh into /srcp2-final-public/cmp_workspace
 ```
  cp source_cmd.sh ~/srcp2-final-public/cmp_workspace
  ```
-## How to use it
-From the folder ~/srcp2-final-public
-run:
-```
-chmod +x launch_sim.sh
-```
-```
-chmod +x open_container.sh
-```
-```
-chmod +x open_new_terminal.sh
-```
 
-to run the simulation
+Inside the source_cmd.sh, change the correct IP address (seems to be different for everyone.
+
+Then, every time a new terminal is open inside a Docker container, you can source the workspaces with:
 ```
-./launch_sim.sh
-```
-In new terminal run the contianer
-```
-./open_container.sh
-```
-and inside the docker terminal to source the workspaces
-```
-cd /home/srcp2/cmp_workspace
-```
-Inside the source_cmd.sh, change the correct IP address (seems to be different for everyone)
-```
-source source_cmd.sh
-```
-For every other new terminal run:
-```
-./open_new_terminal.sh
-```
-```
-cd /home/srcp2/cmp_workspace
-```
-```
-source source_cmd.sh
+cd ~/cmp_workspace && source source_cmd.sh
 ```
