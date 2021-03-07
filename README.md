@@ -33,7 +33,7 @@ cd ~/srcp2-final-public
 docker build --rm -t wvu-competitor -f ~/srcp2-final-public/docker/dockerfiles/wvu_competitor.dockerfile .
 ```
 
-## 2. Launching the Simulator  
+## 3. Launching the Simulator  
   
 ### Alias
 Add the following alias to `~/.bashrc` (only needs performed once):
