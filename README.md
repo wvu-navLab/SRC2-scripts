@@ -8,7 +8,10 @@ docker system prune -a
 ```
 ## Copy file from Github (automatic)
 If not already cloned, clone srcp2-final-public:
-`git clone https://gitlab.com/scheducation/srcp2-final-public.git`
+```
+git clone https://gitlab.com/scheducation/srcp2-final-public.git
+```  
+Now, copy the docker files and launch scripts from the scripts repository:
 
 ```    
 git clone https://github.com/wvu-navLab/SRC2-scripts
