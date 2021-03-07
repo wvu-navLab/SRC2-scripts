@@ -15,7 +15,7 @@ Copy the docker files and launch scripts from the scripts repository using the f
 
 ```    
 git clone https://github.com/wvu-navLab/SRC2-scripts
-cp ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfiles & cp ~/SRC2-scripts/wvu_srcp2_final ~/srcp2-final-public/docker/scripts & cp ~/SRC2-scripts/wvu_comp_final ~/srcp2-final-public/docker/scripts & chmod +x ~/srcp2-final-public/docker/scripts/wvu_srcp2_final & chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final
+cp ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfiles & cp ~/SRC2-scripts/wvu_srcp2_final ~/srcp2-final-public/docker/scripts & cp ~/SRC2-scripts/wvu_comp_final ~/srcp2-final-public/docker/scripts & mkdir ~/srcp2-final-public/config & cp ~/SRC2-scripts/default_config.yaml ~/srcp2-final-public/config & chmod +x ~/srcp2-final-public/docker/scripts/wvu_srcp2_final & chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final
 rm -rf ~/SRC2-scripts
 ```  
    
