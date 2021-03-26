@@ -11,6 +11,8 @@ FROM ${base_image}
 ARG enduser_name="srcp2"
 
 USER root
+RUN apt-get update
+
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get install -y ros-noetic-pcl-ros
 
 RUN apt-get update && apt-get install -y \
