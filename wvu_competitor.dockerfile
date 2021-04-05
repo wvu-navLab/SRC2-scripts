@@ -36,14 +36,17 @@ RUN apt-get update && apt-get install -y \
     ros-noetic-map-server \
     ros-noetic-laser-assembler \
     ros-noetic-tf2-tools \
-    ros-noetic-genpy
+    ros-noetic-genpy \
+    ros-noetic-image-view
+
 
 RUN apt-get update && pip3 install osrf-pycommon \
-    scipy \
+    scipy==1.4.1 \
     numpy==1.19.2 \
     Pillow \
     setuptools \
-    tensorflow \
+    tensorflow==2.2.0 \
+    matplotlib \
     keras==2.3.1
 
 # make sure that we are _not_ root at this time!
