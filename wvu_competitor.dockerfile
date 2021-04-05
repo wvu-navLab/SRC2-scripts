@@ -36,10 +36,9 @@ RUN apt-get update && apt-get install -y \
     ros-noetic-map-server \
     ros-noetic-laser-assembler \
     ros-noetic-tf2-tools \
-    ros-noetic-genpy \
-    && \
-    \
-    pip3 install osrf-pycommon \
+    ros-noetic-genpy
+
+RUN apt-get update && pip3 install osrf-pycommon \
     scipy \
     numpy==1.19.2 \
     Pillow \
