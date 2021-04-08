@@ -69,3 +69,12 @@ Then, every time a new terminal is open inside a Docker container, you can sourc
 ```
 cd ~/cmp_workspace && source source_cmd.sh
 ```
+## Development
+
+### Task Planner
+The task_planner.rosinstall contains the dependencies for testing the task planner:
+```
+wstool init ~/srcp2-final-public/cmp_workspace/src/ https://raw.githubusercontent.com/wvu-navLab/SRC2-scripts/master/task_planning.rosinstall?token=ABXQJT3N45LJRDRVUIJI5C3ANZNVU
+```
+Note, if the workspace is already initialized, then the command won't work. This can be resolved by running `rm -rf ~/srcp2-final-public/cmp_workspace/src` and `mkdir ~/srcp2-final-public/cmp_workspace/src`
+
