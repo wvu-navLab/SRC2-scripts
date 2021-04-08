@@ -1,0 +1,3 @@
+- git: {local-name: SRC2-smach, uri: 'https://github.com/wvu-navLab/SRC2-smach.git', version: dev}
+- git: {local-name: SRC2-smach, uri: 'https://github.com/wvu-navLab/SRC2-gazebo-truth-odom.git', version: master}
+- git: {local-name: SRC2-smach, uri: 'https://github.com/wvu-navLab/SRC2-volatiles.git', version: master}
