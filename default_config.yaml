@@ -26,4 +26,4 @@ generate_heightmap: true
 heightmap_path: ~/.gazebo/runtime_heightmap.png
 system_monitor_enabled: true
 run_endless: false
-
+start_power_percentage: 100.0
