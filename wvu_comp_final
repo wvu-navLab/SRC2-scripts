@@ -200,6 +200,7 @@ docker run --rm  \
     --name $cmp_container_name\
     --user 1001:1001 \
     $interactive \
+    --gpus all \
     --env="DISPLAY"=$DISPLAY \
     --env=XAUTHORITY=$xauth \
     --env=XAUTHORITY=$xauth \
