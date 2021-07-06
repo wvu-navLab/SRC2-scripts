@@ -101,7 +101,7 @@ Copy files for creating solution image:
 
 ```    
 git clone https://github.com/wvu-navLab/SRC2-scripts
-cp ~/SRC2-scripts/solution-entrypoint.bash ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/wvu_competitor_submit.dockerfile ~/srcp2-final-public/docker/dockerfiles/submission.dockerfile
+cp ~/SRC2-scripts/solution-entrypoint.bash ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/wvu_competitor_submit.dockerfile ~/srcp2-final-public/docker/dockerfiles/solution.dockerfile
 rm -rf ~/SRC2-scripts
 ```  
    
