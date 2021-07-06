@@ -24,7 +24,7 @@ rm -rf ~/SRC2-scripts
 If not already cloned, clone srcp2-final-public:
 `git clone https://gitlab.com/scheducation/srcp2-final-public.git`
 
-Copy `wvu_competitor.dockerfile` to `~/srcp2-final-public/docker/dockerfiles` folder, `wvu_srcp2_final` script to `~/srcp2-final-public/docker/scripts` folder, and `wvu_comp_final` script to `~/srcp2-final-public/docker/scripts` folder.
+Copy `wvu_competitor.dockerfile` to `~/srcp2-final-public/docker/dockerfiles` folder, and `wvu_comp_final` script to `~/srcp2-final-public/docker/scripts` folder.
 
 ## 2. Build the local Docker image
 
