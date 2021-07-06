@@ -5,8 +5,8 @@
 # be used
 team:
   scouts: 2
-  excavators: 2
-  haulers: 2
+  excavators: 1
+  haulers: 1
 
 # ------------------------------------------------------------------------------
 # Simulation Configuration
