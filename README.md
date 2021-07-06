@@ -20,7 +20,7 @@ cp ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfi
 rm -rf ~/SRC2-scripts
 ```  
    
-### Copy files from Github (manually)
+### Copy files from Github (manually, not required if used automatic)
 If not already cloned, clone srcp2-final-public:
 `git clone https://gitlab.com/scheducation/srcp2-final-public.git`
 
