@@ -73,17 +73,27 @@ RUN apt-get update && pip3 install osrf-pycommon \
     matplotlib \
     keras-nightly==2.5.0.dev2021032900
 
-#automatically source
-RUN echo "source /home/srcp2/ros_workspace/install/setup.bash" >> /etc/bash.bashrc
-RUN echo "source /home/srcp2/cmp_workspace/devel/setup.bash" >> /etc/bash.bashrc
-RUN echo "export ROS_MASTER_URI=http://172.18.0.3:11311"  >> /etc/bash.bashrc ##Set de current address from sim container
-#RUN echo "export PATH=/usr/local/cuda-11.2/bin${PATH:+:${PATH}}"  >> /etc/bash.bashrc
-#RUN echo "export LD_LIBRARY_PATH=/usr/local/cuda-11.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"  >> /etc/bash.bashrc
-#RUN echo "export CUDA_HOME=/usr/local/cuda"  >> /etc/bash.bashrc
+# Make Home Folder Tree Proper Permissions ** THESE ARE REQUIRED **
+# copy in the "binary" & src versions of all the ROS packages
+# User Level 
+USER ${enduser_name}
+RUN mkdir -p -v /home/$enduser_name/cmp_workspace
+COPY --chown=${enduser_name}:${enduser_name} cmp_workspace/install ${HOME}/cmp_workspace/install/
+COPY --chown=${enduser_name}:${enduser_name} cmp_workspace/src ${HOME}/cmp_workspace/src/
 
+# Root Level Permissions
+USER root
+RUN chown -R "${enduser_name}:${enduser_name}" "/home/${enduser_name}";\
+    ls -la "/home/${enduser_name}"
 
-
-# make sure that we are _not_ root at this time!
+# User Level Permissions
 USER ${enduser_name}
 
-#add non root stuff here
+# Entrypoint and Config Copies ** THESE ARE REQUIRED **
+COPY docker/scripts/container/solution-entrypoint.bash ${HOME}/scripts
+COPY docker/scripts/container/config_solution.yaml ${HOME}/config
+
+# starting conditions (note: CMD not ENTRYPOINT for --interactive override)
+ENV SOLUTION_ENTRYPOINT="${HOME}/scripts/solution-entrypoint.bash"
+CMD ${SOLUTION_ENTRYPOINT}
+
