@@ -12,11 +12,11 @@ If not already cloned, clone srcp2-final-public using the following command from
 ```
 git clone https://gitlab.com/scheducation/srcp2-final-public.git
 ```  
-Copy the docker files and launch scripts from the scripts repository using the following commands from the home directory:  
+Copy the docker files, entrypoint, and launch scripts from the scripts repository using the following commands from the home directory:  
 
 ```    
 git clone https://github.com/wvu-navLab/SRC2-scripts
-cp ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfiles & cp ~/SRC2-scripts/wvu_comp_final ~/srcp2-final-public/docker/scripts & mkdir ~/srcp2-final-public/config & cp ~/SRC2-scripts/default_config.yaml ~/srcp2-final-public/config & chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final
+cp ~/SRC2-scripts/solution-entrypoint.bash ~/srcp2-final-public/docker/scripts & cp ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfiles & cp ~/SRC2-scripts/wvu_comp_final ~/srcp2-final-public/docker/scripts & mkdir ~/srcp2-final-public/config & cp ~/SRC2-scripts/default_config.yaml ~/srcp2-final-public/config & chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final
 rm -rf ~/SRC2-scripts
 ```  
    
