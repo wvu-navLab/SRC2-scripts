@@ -38,7 +38,7 @@ docker build --rm -t wvu-competitor -f ~/srcp2-final-public/docker/dockerfiles/w
 ### Alias
 Add the following alias to `~/.bashrc` (only needs performed once):
 ```
-alias src2_sim='~/srcp2-final-public/docker/scripts/run_srcp2_final -C ~/srcp2-final-public/config/default_config.yaml -L'
+alias src2_sim='~/srcp2-final-public/docker/scripts/run_srcp2_final -C ~/srcp2-final-public/config/config_solution.yaml -L'
 alias src2_term='~/srcp2-final-public/docker/scripts/wvu_comp_final -d -i -L'
 alias src2_nterm='docker exec -it competitor-final /bin/bash'
 alias src2_rviz='docker exec -it srcp2-final bash -c "source ~/ros_workspace/install/setup.bash;rosrun rviz rviz"'
@@ -47,7 +47,7 @@ alias src2_rviz='docker exec -it srcp2-final bash -c "source ~/ros_workspace/ins
 ### Launch the sim
 To launch the simulator, execuate the command `src2_sim`, or the following:
 ```
-~/srcp2-final-public/docker/scripts/wvu_srcp2_final -C ~/srcp2-final-public/config/default_config.yaml -L
+~/srcp2-final-public/docker/scripts/wvu_srcp2_final -C ~/srcp2-final-public/config/config_solution.yaml -L
 ```
 
 ### Launch terminal on Docker image
