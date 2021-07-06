@@ -87,7 +87,14 @@ cd ~/cmp_workspace && source source_cmd.sh
 
 ### Step 1. Download and Build Code
 
-Download and build our code, so the `src` and `install` folders exist, which is required for building the submission image.
+Download and build our code, so the `src` and `install` folders exist, which is required for building the submission image. To build properly, delete the `cmp_workspace/install`, `cmp_workspace/devel`, `cmp_workspace/build`, and `cmp_workspace/log` folders, then execute the following commands:
+```
+cd
+cd cmp_workspace
+mkdir install
+catkin config --install
+catkin build
+```
 
 ### Step 2. Copy Files for Building Solution Image
 Copy files for creating solution image:   
