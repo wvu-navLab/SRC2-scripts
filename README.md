@@ -34,6 +34,7 @@ cd
 git clone https://github.com/wvu-navLab/SRC2-meta
 cd ~/srcp2-final-public/cmp_workspace 
 wstool init src/ ~/SRC2-meta/finals.rosinstall
+rm -rf ~/SRC2-meta
 ```
 
 Download the .h5 file from the following link: `https://drive.google.com/file/d/1932RKOfU87ylLC-n6bQkDjD2IacnZbT_/view?usp=sharing` to `~/srcp2-final-public/cmp_workspace/src/SRC2-object-detection/src`
