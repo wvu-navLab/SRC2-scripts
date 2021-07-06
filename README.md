@@ -16,7 +16,7 @@ Copy the docker files, entrypoint, and launch scripts from the scripts repositor
 
 ```    
 git clone https://github.com/wvu-navLab/SRC2-scripts
-mkdir ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/solution-entrypoint.bash ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfiles/wvu_competitor.dockerfile & cp ~/SRC2-scripts/wvu_comp_final ~/srcp2-final-public/docker/scripts & mkdir ~/srcp2-final-public/config & cp ~/SRC2-scripts/config_solution.yaml ~/srcp2-final-public/config & chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final
+cp ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfiles/wvu_competitor.dockerfile & cp ~/SRC2-scripts/wvu_comp_final ~/srcp2-final-public/docker/scripts & mkdir ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/config_solution.yaml ~/srcp2-final-public/docker/scripts/container & chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final
 rm -rf ~/SRC2-scripts
 ```  
    
@@ -51,7 +51,7 @@ docker build --rm -t wvu-competitor -f ~/srcp2-final-public/docker/dockerfiles/w
 ### Alias
 Add the following alias to `~/.bashrc` (only needs performed once):
 ```
-alias src2_sim='~/srcp2-final-public/docker/scripts/run_srcp2_final -C ~/srcp2-final-public/config/config_solution.yaml -L'
+alias src2_sim='~/srcp2-final-public/docker/scripts/run_srcp2_final -C ~/srcp2-final-public/docker/scripts/container/config_solution.yaml -L'
 alias src2_term='~/srcp2-final-public/docker/scripts/wvu_comp_final -d -i -L'
 alias src2_nterm='docker exec -it competitor-final /bin/bash'
 alias src2_rviz='docker exec -it srcp2-final bash -c "source ~/ros_workspace/install/setup.bash;rosrun rviz rviz"'
@@ -60,7 +60,7 @@ alias src2_rviz='docker exec -it srcp2-final bash -c "source ~/ros_workspace/ins
 ### Launch the sim
 To launch the simulator, execuate the command `src2_sim`, or the following:
 ```
-~/srcp2-final-public/docker/scripts/wvu_srcp2_final -C ~/srcp2-final-public/config/config_solution.yaml -L
+~/srcp2-final-public/docker/scripts/wvu_srcp2_final -C ~/srcp2-final-public/docker/scripts/container/config_solution.yaml -L
 ```
 
 ### Launch terminal on Docker image
@@ -88,7 +88,7 @@ cd ~/cmp_workspace && source source_cmd.sh
 Copy files for creating solution image:
 ```    
 git clone https://github.com/wvu-navLab/SRC2-scripts
-mkdir ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/solution-entrypoint.bash ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/wvu_competitor_submit.dockerfile ~/srcp2-final-public/docker/dockerfiles/submission.dockerfile
+cp ~/SRC2-scripts/solution-entrypoint.bash ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/wvu_competitor_submit.dockerfile ~/srcp2-final-public/docker/dockerfiles/submission.dockerfile
 rm -rf ~/SRC2-scripts
 ```  
 
