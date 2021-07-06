@@ -85,12 +85,19 @@ cd ~/cmp_workspace && source source_cmd.sh
 
 ## 4. Submission
 
-Copy files for creating solution image:
+Copy files for creating solution image:   
+
 ```    
 git clone https://github.com/wvu-navLab/SRC2-scripts
 cp ~/SRC2-scripts/solution-entrypoint.bash ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/wvu_competitor_submit.dockerfile ~/srcp2-final-public/docker/dockerfiles/submission.dockerfile
 rm -rf ~/SRC2-scripts
 ```  
+   
+If `./build_comp_image.bash` is not an executable, run `chmod +x build_comp_image.bash`; otherwise, run the following to build the submission image:
+```
+cd ~/srcp2-final-public/docker/scripts/
+./build_comp_image.bash -t wvumountaineers -n -v
+```
 
 ## Development
 
