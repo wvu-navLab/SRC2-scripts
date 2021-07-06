@@ -83,7 +83,7 @@ Then, every time a new terminal is open inside a Docker container, you can sourc
 cd ~/cmp_workspace && source source_cmd.sh
 ```
 
-## 3. Submission
+## 4. Submission
 
 Copy files for creating solution image:
 ```    
