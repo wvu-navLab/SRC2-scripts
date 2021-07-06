@@ -26,6 +26,10 @@ If not already cloned, clone srcp2-final-public:
 
 Copy `wvu_competitor.dockerfile` to `~/srcp2-final-public/docker/dockerfiles` folder, and `wvu_comp_final` script to `~/srcp2-final-public/docker/scripts` folder.
 
+### Download Source Code
+
+...   
+
 ## 2. Build the local Docker image
 
 ```
