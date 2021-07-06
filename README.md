@@ -85,6 +85,11 @@ cd ~/cmp_workspace && source source_cmd.sh
 
 ## 4. Submission
 
+### Step 1. Download and Build Code
+
+Download and build our code, so the `src` and `install` folders exist, which is required for building the submission image.
+
+### Step 2. Copy Files for Building Solution Image
 Copy files for creating solution image:   
 
 ```    
@@ -93,6 +98,7 @@ cp ~/SRC2-scripts/solution-entrypoint.bash ~/srcp2-final-public/docker/scripts/c
 rm -rf ~/SRC2-scripts
 ```  
    
+### Step 3. Build Solution Image
 If `./build_comp_image.bash` is not an executable, run `chmod +x build_comp_image.bash`; otherwise, run the following to build the submission image:
 ```
 cd ~/srcp2-final-public/docker/scripts/
