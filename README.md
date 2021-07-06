@@ -16,7 +16,7 @@ Copy the docker files, entrypoint, and launch scripts from the scripts repositor
 
 ```    
 git clone https://github.com/wvu-navLab/SRC2-scripts
-mkdir ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/solution-entrypoint.bash ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/wvu_competitor_submit.dockerfile ~/srcp2-final-public/docker/dockerfiles/solution.dockerfile & cp ~/SRC2-scripts/wvu_comp_final ~/srcp2-final-public/docker/scripts & mkdir ~/srcp2-final-public/config & cp ~/SRC2-scripts/config_solution.yaml ~/srcp2-final-public/config & chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final
+mkdir ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/solution-entrypoint.bash ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/wvu_competitor.dockerfile ~/srcp2-final-public/docker/dockerfiles/wvu_competitor.dockerfile & cp ~/SRC2-scripts/wvu_comp_final ~/srcp2-final-public/docker/scripts & mkdir ~/srcp2-final-public/config & cp ~/SRC2-scripts/config_solution.yaml ~/srcp2-final-public/config & chmod +x ~/srcp2-final-public/docker/scripts/wvu_comp_final
 rm -rf ~/SRC2-scripts
 ```  
    
@@ -82,6 +82,16 @@ Then, every time a new terminal is open inside a Docker container, you can sourc
 ```
 cd ~/cmp_workspace && source source_cmd.sh
 ```
+
+## 3. Submission
+
+Copy files for creating solution image:
+```    
+git clone https://github.com/wvu-navLab/SRC2-scripts
+mkdir ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/solution-entrypoint.bash ~/srcp2-final-public/docker/scripts/container & cp ~/SRC2-scripts/wvu_competitor_submit.dockerfile ~/srcp2-final-public/docker/dockerfiles/submission.dockerfile
+rm -rf ~/SRC2-scripts
+```  
+
 ## Development
 
 ### Task Planner
