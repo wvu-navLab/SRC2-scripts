@@ -38,6 +38,7 @@ RUN apt-get install libcudnn8=8.1.1.*-1+cuda11.2 -y
 RUN apt-get install libcudnn8-dev=8.1.1.*-1+cuda11.2 -y
 
 ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/usr/local/cuda-11.2/targets/x86_64-linux/lib
+RUN rm -f cuda-repo-ubuntu2004-11-2-local_11.2.2-460.32.03-1_amd64.deb 
 
 RUN apt-get update && apt-get install -y \
     git \
